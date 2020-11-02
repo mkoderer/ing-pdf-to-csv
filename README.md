@@ -1,2 +1,18 @@
-# ing-pdf-to-csv
-Transforms a ING pdf (Kontoauszug) into a CSV file
+# ing-pdf-to-csv.py
+Transforms a ING DIBA pdf (Kontoauszug) into a CSV file.
+Import works fine with [MoneyMoney](https://moneymoney-app.com/)
+
+# Installation
+## MacOS
+
+```bash
+brew install pdftotext python3
+python3 ing-pdf-to-csv.py *.pdf
+```
+
+## Windows
+Please install pdftotext and add it to your PATH.
+
+# Limitation
+Only uses the first two lines of every transaction.
+
