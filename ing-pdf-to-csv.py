@@ -22,7 +22,7 @@ for fn in sys.argv[1:]:
             first_line = m
         else:
             m = re.match(sec_line_date, line)
-            if m and first_line != "":
+            if m and first_line is not None:
                 date = first_line.group(1)
                 valuta = m.group(1)
                 type_emp = first_line.group(2).rstrip()
@@ -36,6 +36,4 @@ for fn in sys.argv[1:]:
                 value = first_line.group(3)
                 csv_line = "%s;%s;%s;%s;%s;%s;%s;%s;%s" % (date, valuta, empf, trans_type, text, value ,"EUR", value, "EUR")
                 print (csv_line)
-                first_line = None
-            else:
                 first_line = None
