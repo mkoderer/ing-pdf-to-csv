@@ -14,5 +14,5 @@ python3 ing-pdf-to-csv.py *.pdf
 Please install pdftotext and add it to your PATH.
 
 # Limitation
-Only uses the first two lines of every transaction.
+Uses only the first two lines of every transaction.
 
