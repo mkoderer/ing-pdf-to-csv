@@ -6,7 +6,7 @@ Import works fine with [MoneyMoney](https://moneymoney-app.com/)
 ## MacOS
 
 ```bash
-brew install pdftotext python3
+pip3 install pdftotext
 python3 ing-pdf-to-csv.py *.pdf
 ```
 
