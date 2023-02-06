@@ -14,7 +14,7 @@ for fn in sys.argv[1:]:
         raise Exception(output)
 
     first_line_date_value = r'.*(\d\d\.\d\d\.\d\d\d\d) +(.*) +(.*,\d\d)'
-    sec_line_date = r'.*(\d\d\.\d\d\.\d\d\d\d) +(.*)'
+    sec_line_date = r'.*(\d\d\.\d\d\.\d\d\d\d)( +(.*))?'
     first_line = None
     for line in output.split('\n'):
         m = re.match(first_line_date_value, line)
@@ -32,7 +32,7 @@ for fn in sys.argv[1:]:
                     empf = type_emp[1]
                 except:
                     empf = trans_type
-                text = m.group(2)
+                text = m.group(3) if m.group(3) is not None else ''
                 value = first_line.group(3)
                 csv_line = "%s;%s;%s;%s;%s;%s;%s;%s;%s" % (date, valuta, empf, trans_type, text, value ,"EUR", value, "EUR")
                 print (csv_line)
