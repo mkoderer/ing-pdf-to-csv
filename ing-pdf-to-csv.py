@@ -13,7 +13,7 @@ for fn in sys.argv[1:]:
         print ("Error while reading file %s:" % fn)
         raise Exception(output)
 
-    first_line_date_value = r'^\s+(\d{2}\.\d{2}\.\d{4})\s+(.*)\s+(\-{0,1}[\.\d]{1,},\d{2})$'
+    first_line_date_value = r'^\s+(\d{2}\.\d{2}\.\d{4})\s+(.*)\s{4,}(\-{0,1}[\.\d]{1,},\d{2})$'
     sec_line_date = r'^\s+(\d{2}\.\d{2}\.\d{4})\s*(.*)$'
     sec_line_desc = r'^\s+(.*)$'
     mandat_line = r'^Mandat:\s(.*)$'
