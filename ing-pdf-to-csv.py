@@ -18,7 +18,7 @@ for fn in sys.argv[1:]:
     sec_line_desc = r'^\s+(.*)$'
     mandat_line = r'^Mandat:\s(.*)$'
     referenz_line = r'^Referenz:\s(.*)$'
-    end_of_line = r'^\s*$'
+    end_of_line = r'^\s*(Neuer Saldo\s.*){0,1}$'
 
     i = -1
     parsed_lines=[]
